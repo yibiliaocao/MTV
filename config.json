@@ -96,84 +96,19 @@
       "name": "91MD资源",
       "type": "parent",
       "children": [
-        {
-          "name": "电影",
-          "type": "movie",
-          "site": "91md",
-          "query": "电影"
-        },
-        {
-          "name": "电视剧",
-          "type": "tv",
-          "site": "91md",
-          "query": "电视剧"
-        },
-        {
-          "name": "动漫",
-          "type": "movie",
-          "site": "91md",
-          "query": "动漫"
-        },
-        {
-          "name": "麻豆视频",
-          "type": "movie",
-          "site": "91md",
-          "query": "麻豆视频"
-        },
-        {
-          "name": "91制片厂",
-          "type": "movie",
-          "site": "91md",
-          "query": "91制片厂"
-        },
-        {
-          "name": "天美传媒",
-          "type": "movie",
-          "site": "91md",
-          "query": "天美传媒"
-        },
-        {
-          "name": "蜜桃传媒",
-          "type": "movie",
-          "site": "91md",
-          "query": "蜜桃传媒"
-        },
-        {
-          "name": "皇家华人",
-          "type": "movie",
-          "site": "91md",
-          "query": "皇家华人"
-        },
-        {
-          "name": "星空传媒",
-          "type": "movie",
-          "site": "91md",
-          "query": "星空传媒"
-        },
-        {
-          "name": "精东影业",
-          "type": "movie",
-          "site": "91md",
-          "query": "精东影业"
-        },
-        {
-          "name": "乐播传媒",
-          "type": "movie",
-          "site": "91md",
-          "query": "乐播传媒"
-        },
-        {
-          "name": "成人头条",
-          "type": "movie",
-          "site": "91md",
-          "query": "成人头条"
-        },
-        {
-          "name": "开心鬼传媒",
-          "type": "movie",
-          "site": "91md",
-          "query": "开心鬼传媒"
-        }
+        { "name": "电影", "type": "movie", "site": "91md", "query": "电影" },
+        { "name": "电视剧", "type": "tv", "site": "91md", "query": "电视剧" },
+        { "name": "动漫", "type": "movie", "site": "91md", "query": "动漫" },
+        { "name": "麻豆视频", "type": "movie", "site": "91md", "query": "麻豆视频" },
+        { "name": "91制片厂", "type": "movie", "site": "91md", "query": "91制片厂" },
+        { "name": "天美传媒", "type": "movie", "site": "91md", "query": "天美传媒" },
+        { "name": "蜜桃传媒", "type": "movie", "site": "91md", "query": "蜜桃传媒" },
+        { "name": "皇家华人", "type": "movie", "site": "91md", "query": "皇家华人" },
+        { "name": "星空传媒", "type": "movie", "site": "91md", "query": "星空传媒" },
+        { "name": "精东影业", "type": "movie", "site": "91md", "query": "精东影业" },
+        { "name": "乐播传媒", "type": "movie", "site": "91md", "query": "乐播传媒" },
+        { "name": "成人头条", "type": "movie", "site": "91md", "query": "成人头条" },
+        { "name": "开心鬼传媒", "type": "movie", "site": "91md", "query": "开心鬼传媒" }
       ]
     }
   ]
