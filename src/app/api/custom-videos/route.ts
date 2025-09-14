@@ -1,45 +1,31 @@
 import { NextResponse } from 'next/server';
 
-interface CustomChild {
-  name: string;
-  query: string;
-  source: string;
-}
-
 interface CustomParent {
   name: string;
-  children: CustomChild[];
-}
-
-interface RuntimeConfig {
-  CUSTOM_PARENT_CATEGORY?: CustomParent[];
+  children: { name: string; type: string; query: string }[];
 }
 
 export const runtime = 'edge';
 
+const RUNTIME_CONFIG: { CUSTOM_PARENT_CATEGORY?: CustomParent[] } = (globalThis as any).RUNTIME_CONFIG ?? {};
+
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const parentName = url.searchParams.get('parent') ?? '';
-  const runtimeConfig = (globalThis as any).RUNTIME_CONFIG as RuntimeConfig;
-  const parents = runtimeConfig?.CUSTOM_PARENT_CATEGORY ?? [];
+  const parentName = url.searchParams.get('parent');
+  if (!parentName) return NextResponse.json({ videos: [] });
 
-  const parent = parents.find((p) => p.name === parentName);
+  const parent = RUNTIME_CONFIG.CUSTOM_PARENT_CATEGORY?.find(p => p.name === parentName);
   if (!parent) return NextResponse.json({ videos: [] });
 
-  // 遍历子分类，调用指定 source API 获取视频数据（示例使用 fetch）
   const videos: any[] = [];
+
   for (const child of parent.children) {
     try {
-      const res = await fetch(`${child.source}?query=${encodeURIComponent(child.query)}`);
+      // 假设子分类的 query 可以直接用于资源站 API
+      const apiUrl = `https://example.com/api?type=${child.type}&query=${encodeURIComponent(child.query)}`;
+      const res = await fetch(apiUrl);
       const data = await res.json();
-      if (Array.isArray(data.items)) {
-        videos.push(...data.items.map((item: any) => ({
-          id: item.id,
-          title: item.title,
-          cover: item.cover,
-          source: child.source,
-        })));
-      }
+      if (Array.isArray(data.videos)) videos.push(...data.videos);
     } catch (err) {
       console.error(err);
     }
