@@ -4,6 +4,7 @@ import MobileHeader from './MobileHeader';
 import Sidebar from './Sidebar';
 import { ThemeToggle } from './ThemeToggle';
 import { UserMenu } from './UserMenu';
+import { useMemo } from 'react';
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -11,16 +12,29 @@ interface PageLayoutProps {
 }
 
 const PageLayout = ({ children, activePath = '/' }: PageLayoutProps) => {
+  // 解析 activePath，拆分出 activeParent / activeChild
+  const { activeParent, activeChild } = useMemo(() => {
+    try {
+      const url = new URL(activePath, 'http://localhost'); // 需要 base 才能解析
+      return {
+        activeParent: url.searchParams.get('parent') || '',
+        activeChild: url.searchParams.get('child') || '',
+      };
+    } catch {
+      return { activeParent: '', activeChild: '' };
+    }
+  }, [activePath]);
+
   return (
     <div className='w-full min-h-screen'>
       {/* 移动端头部 */}
       <MobileHeader showBackButton={['/play'].includes(activePath)} />
 
-      {/* 主要布局容器 */}
+      {/* 主体布局 */}
       <div className='flex md:grid md:grid-cols-[auto_1fr] w-full min-h-screen md:min-h-auto'>
-        {/* 侧边栏 - 桌面端显示，移动端隐藏 */}
+        {/* 桌面端侧边栏 */}
         <div className='hidden md:block'>
-          <Sidebar activePath={activePath} />
+          <Sidebar activeParent={activeParent} activeChild={activeChild} />
         </div>
 
         {/* 主内容区域 */}
