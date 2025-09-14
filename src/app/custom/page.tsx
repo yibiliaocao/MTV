@@ -18,8 +18,8 @@ const CustomPage = () => {
   useEffect(() => {
     if (!parent) return;
     fetch(`/api/custom-videos?parent=${encodeURIComponent(parent)}`)
-      .then((res) => res.json())
-      .then((data) => setVideos(data.videos || []))
+      .then(res => res.json())
+      .then(data => setVideos(data.videos ?? []))
       .catch(console.error);
   }, [parent]);
 
@@ -27,7 +27,7 @@ const CustomPage = () => {
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">{parent}</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {videos.map((video) => (
+        {videos.map(video => (
           <div key={video.id} className="rounded overflow-hidden shadow-lg">
             <img src={video.cover} alt={video.title} className="w-full h-40 object-cover" />
             <div className="p-2">
