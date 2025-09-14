@@ -1,28 +1,34 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-interface Video {
+interface VideoItem {
   id: string;
   title: string;
-  thumb: string;
-  link: string;
+  url: string;
 }
 
-// 模拟资源站数据
-const MOCK_DATA: Record<string, Video[]> = {
-  动作: [
-    { id: '1', title: '动作片A', thumb: '/thumb1.jpg', link: '/video/1' },
-    { id: '2', title: '动作片B', thumb: '/thumb2.jpg', link: '/video/2' },
-  ],
-  喜剧: [
-    { id: '3', title: '喜剧片A', thumb: '/thumb3.jpg', link: '/video/3' },
-    { id: '4', title: '喜剧片B', thumb: '/thumb4.jpg', link: '/video/4' },
-  ],
+const VIDEO_DB: Record<string, Record<string, VideoItem[]>> = {
+  '父分类1': {
+    'A': [
+      { id: '1', title: '视频1', url: 'https://example.com/1' },
+      { id: '2', title: '视频2', url: 'https://example.com/2' },
+    ],
+    'B': [
+      { id: '3', title: '视频3', url: 'https://example.com/3' },
+    ],
+  },
+  '父分类2': {
+    'C': [
+      { id: '4', title: '视频4', url: 'https://example.com/4' },
+    ],
+  },
 };
 
-export async function GET(request: Request) {
-  const url = new URL(request.url);
+export async function GET(req: NextRequest) {
+  const url = new URL(req.url);
   const parent = url.searchParams.get('parent') || '';
-  const videos = MOCK_DATA[parent] || [];
+  const child = url.searchParams.get('child') || '';
+
+  const videos = VIDEO_DB[parent]?.[child] || [];
 
   return NextResponse.json({ videos });
 }
