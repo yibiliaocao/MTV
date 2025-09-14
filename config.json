@@ -84,6 +84,40 @@
     "xiaomaomi": {
       "api": "https://zy.xmm.hk/api.php/provide/vod",
       "name": "小猫咪资源"
+    },
+    "md91": {
+      "api": "https://91md.me/api.php/provide/vod",
+      "name": "91MD资源",
+      "detail": "https://91md.me"
     }
-  }
+  },
+  "categories": [
+    {
+      "key": "md91",
+      "name": "皮友福利",
+      "site": "md91",
+      "children": [
+        {"key":"md91_1","name":"麻豆视频","site":"md91","type":1},
+        {"key":"md91_2","name":"91制片厂","site":"md91","type":2},
+        {"key":"md91_3","name":"天美传媒","site":"md91","type":3},
+        {"key":"md91_4","name":"蜜桃传媒","site":"md91","type":4},
+        {"key":"md91_5","name":"皇家华人","site":"md91","type":5},
+        {"key":"md91_6","name":"星空传媒","site":"md91","type":6},
+        {"key":"md91_7","name":"精东影业","site":"md91","type":7},
+        {"key":"md91_8","name":"乐播传媒","site":"md91","type":8},
+        {"key":"md91_9","name":"成人头条","site":"md91","type":9},
+        {"key":"md91_10","name":"乌鸦传媒","site":"md91","type":10},
+        {"key":"md91_20","name":"兔子先生","site":"md91","type":20},
+        {"key":"md91_21","name":"杏吧原创","site":"md91","type":21},
+        {"key":"md91_22","name":"玩偶姐姐","site":"md91","type":22},
+        {"key":"md91_23","name":"mini传媒","site":"md91","type":23},
+        {"key":"md91_24","name":"大象传媒","site":"md91","type":24},
+        {"key":"md91_25","name":"开心鬼传媒","site":"md91","type":25},
+        {"key":"md91_26","name":"PsychoPorn","site":"md91","type":26},
+        {"key":"md91_27","name":"糖心Vlog","site":"md91","type":27},
+        {"key":"md91_29","name":"萝莉社","site":"md91","type":29},
+        {"key":"md91_30","name":"性视界","site":"md91","type":30}
+      ]
+    }
+  ]
 }
