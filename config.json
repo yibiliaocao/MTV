@@ -93,9 +93,27 @@
   },
   "custom_category": [
     {
-      "name": "皮友福利",
+      "name": "91MD资源",
       "type": "parent",
       "children": [
+        {
+          "name": "电影",
+          "type": "movie",
+          "site": "91md",
+          "query": "电影"
+        },
+        {
+          "name": "电视剧",
+          "type": "tv",
+          "site": "91md",
+          "query": "电视剧"
+        },
+        {
+          "name": "动漫",
+          "type": "movie",
+          "site": "91md",
+          "query": "动漫"
+        },
         {
           "name": "麻豆视频",
           "type": "movie",
