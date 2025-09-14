@@ -93,30 +93,159 @@
   },
   "categories": [
     {
+      "key": "dyttzy",
+      "name": "电影天堂资源",
+      "site": "dyttzy",
+      "children": [
+        {"key":"dyttzy_movies","name":"电影","site":"dyttzy","type":1},
+        {"key":"dyttzy_tv","name":"电视剧","site":"dyttzy","type":2},
+        {"key":"dyttzy_anime","name":"动漫","site":"dyttzy","type":3}
+      ]
+    },
+    {
+      "key": "heimuer",
+      "name": "黑木耳",
+      "site": "heimuer",
+      "children": [
+        {"key":"heimuer_movies","name":"电影","site":"heimuer","type":1},
+        {"key":"heimuer_tv","name":"电视剧","site":"heimuer","type":2},
+        {"key":"heimuer_anime","name":"动漫","site":"heimuer","type":3}
+      ]
+    },
+    {
+      "key": "ruyi",
+      "name": "如意资源",
+      "site": "ruyi",
+      "children": [
+        {"key":"ruyi_movies","name":"电影","site":"ruyi","type":1},
+        {"key":"ruyi_tv","name":"电视剧","site":"ruyi","type":2},
+        {"key":"ruyi_anime","name":"动漫","site":"ruyi","type":3}
+      ]
+    },
+    {
+      "key": "bfzy",
+      "name": "暴风资源",
+      "site": "bfzy",
+      "children": [
+        {"key":"bfzy_movies","name":"电影","site":"bfzy","type":1},
+        {"key":"bfzy_tv","name":"电视剧","site":"bfzy","type":2},
+        {"key":"bfzy_anime","name":"动漫","site":"bfzy","type":3}
+      ]
+    },
+    {
+      "key": "tyyszy",
+      "name": "天涯资源",
+      "site": "tyyszy",
+      "children": [
+        {"key":"tyyszy_movies","name":"电影","site":"tyyszy","type":1},
+        {"key":"tyyszy_tv","name":"电视剧","site":"tyyszy","type":2},
+        {"key":"tyyszy_anime","name":"动漫","site":"tyyszy","type":3}
+      ]
+    },
+    {
+      "key": "ffzy",
+      "name": "非凡影视",
+      "site": "ffzy",
+      "children": [
+        {"key":"ffzy_movies","name":"电影","site":"ffzy","type":1},
+        {"key":"ffzy_tv","name":"电视剧","site":"ffzy","type":2},
+        {"key":"ffzy_anime","name":"动漫","site":"ffzy","type":3}
+      ]
+    },
+    {
+      "key": "zy360",
+      "name": "360资源",
+      "site": "zy360",
+      "children": [
+        {"key":"zy360_movies","name":"电影","site":"zy360","type":1},
+        {"key":"zy360_tv","name":"电视剧","site":"zy360","type":2},
+        {"key":"zy360_anime","name":"动漫","site":"zy360","type":3}
+      ]
+    },
+    {
+      "key": "maotaizy",
+      "name": "茅台资源",
+      "site": "maotaizy",
+      "children": [
+        {"key":"maotaizy_movies","name":"电影","site":"maotaizy","type":1},
+        {"key":"maotaizy_tv","name":"电视剧","site":"maotaizy","type":2},
+        {"key":"maotaizy_anime","name":"动漫","site":"maotaizy","type":3}
+      ]
+    },
+    {
+      "key": "wolong",
+      "name": "卧龙资源",
+      "site": "wolong",
+      "children": [
+        {"key":"wolong_movies","name":"电影","site":"wolong","type":1},
+        {"key":"wolong_tv","name":"电视剧","site":"wolong","type":2},
+        {"key":"wolong_anime","name":"动漫","site":"wolong","type":3}
+      ]
+    },
+    {
+      "key": "jisu",
+      "name": "极速资源",
+      "site": "jisu",
+      "children": [
+        {"key":"jisu_movies","name":"电影","site":"jisu","type":1},
+        {"key":"jisu_tv","name":"电视剧","site":"jisu","type":2},
+        {"key":"jisu_anime","name":"动漫","site":"jisu","type":3}
+      ]
+    },
+    {
+      "key": "dbzy",
+      "name": "豆瓣资源",
+      "site": "dbzy",
+      "children": [
+        {"key":"dbzy_movies","name":"电影","site":"dbzy","type":1},
+        {"key":"dbzy_tv","name":"电视剧","site":"dbzy","type":2},
+        {"key":"dbzy_anime","name":"动漫","site":"dbzy","type":3}
+      ]
+    },
+    {
+      "key": "mozhua",
+      "name": "魔爪资源",
+      "site": "mozhua",
+      "children": [
+        {"key":"mozhua_movies","name":"电影","site":"mozhua","type":1},
+        {"key":"mozhua_tv","name":"电视剧","site":"mozhua","type":2},
+        {"key":"mozhua_anime","name":"动漫","site":"mozhua","type":3}
+      ]
+    },
+    {
+      "key": "mdzy",
+      "name": "魔都资源",
+      "site": "mdzy",
+      "children": [
+        {"key":"mdzy_movies","name":"电影","site":"mdzy","type":1},
+        {"key":"mdzy_tv","name":"电视剧","site":"mdzy","type":2},
+        {"key":"mdzy_anime","name":"动漫","site":"mdzy","type":3}
+      ]
+    },
+    {
       "key": "md91",
-      "name": "皮友福利",
+      "name": "91MD资源",
       "site": "md91",
       "children": [
-        {"key":"md91_1","name":"麻豆视频","site":"md91","type":1},
-        {"key":"md91_2","name":"91制片厂","site":"md91","type":2},
-        {"key":"md91_3","name":"天美传媒","site":"md91","type":3},
-        {"key":"md91_4","name":"蜜桃传媒","site":"md91","type":4},
-        {"key":"md91_5","name":"皇家华人","site":"md91","type":5},
-        {"key":"md91_6","name":"星空传媒","site":"md91","type":6},
-        {"key":"md91_7","name":"精东影业","site":"md91","type":7},
-        {"key":"md91_8","name":"乐播传媒","site":"md91","type":8},
-        {"key":"md91_9","name":"成人头条","site":"md91","type":9},
-        {"key":"md91_10","name":"乌鸦传媒","site":"md91","type":10},
-        {"key":"md91_20","name":"兔子先生","site":"md91","type":20},
-        {"key":"md91_21","name":"杏吧原创","site":"md91","type":21},
-        {"key":"md91_22","name":"玩偶姐姐","site":"md91","type":22},
-        {"key":"md91_23","name":"mini传媒","site":"md91","type":23},
-        {"key":"md91_24","name":"大象传媒","site":"md91","type":24},
-        {"key":"md91_25","name":"开心鬼传媒","site":"md91","type":25},
-        {"key":"md91_26","name":"PsychoPorn","site":"md91","type":26},
-        {"key":"md91_27","name":"糖心Vlog","site":"md91","type":27},
-        {"key":"md91_29","name":"萝莉社","site":"md91","type":29},
-        {"key":"md91_30","name":"性视界","site":"md91","type":30}
+        {"key":"md91_麻豆视频","name":"麻豆视频","site":"md91","type":1},
+        {"key":"md91_91制片厂","name":"91制片厂","site":"md91","type":2},
+        {"key":"md91_天美传媒","name":"天美传媒","site":"md91","type":3},
+        {"key":"md91_蜜桃传媒","name":"蜜桃传媒","site":"md91","type":4},
+        {"key":"md91_皇家华人","name":"皇家华人","site":"md91","type":5},
+        {"key":"md91_星空传媒","name":"星空传媒","site":"md91","type":6},
+        {"key":"md91_精东影业","name":"精东影业","site":"md91","type":7},
+        {"key":"md91_乐播传媒","name":"乐播传媒","site":"md91","type":8},
+        {"key":"md91_成人头条","name":"成人头条","site":"md91","type":9},
+        {"key":"md91_乌鸦传媒","name":"乌鸦传媒","site":"md91","type":10},
+        {"key":"md91_兔子先生","name":"杏吧原创","site":"md91","type":21},
+        {"key":"md91_玩偶姐姐","name":"玩偶姐姐","site":"md91","type":22},
+        {"key":"md91_mini传媒","name":"mini传媒","site":"md91","type":23},
+        {"key":"md91_大象传媒","name":"大象传媒","site":"md91","type":24},
+        {"key":"md91_开心鬼传媒","name":"开心鬼传媒","site":"md91","type":25},
+        {"key":"md91_PsychoPorn","name":"PsychoPorn","site":"md91","type":26},
+        {"key":"md91_糖心Vlog","name":"糖心Vlog","site":"md91","type":27},
+        {"key":"md91_萝莉社","name":"萝莉社","site":"md91","type":29},
+        {"key":"md91_性视界","name":"性视界","site":"md91","type":30}
       ]
     }
   ]
