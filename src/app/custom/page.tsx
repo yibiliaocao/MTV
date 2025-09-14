@@ -1,73 +1,32 @@
-'use client';
+"use client";
 
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import PageLayout from '../../components/PageLayout';
-import Sidebar, { CustomParent } from '../../components/Sidebar';
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Sidebar from "@/components/Sidebar";
+import PageLayout from "@/components/PageLayout";
 
-interface VideoItem {
-  id: string;
-  title: string;
-  url: string;
-}
-
-// 自定义父子分类
-const CUSTOM_CONFIG: CustomParent[] = [
-  {
-    name: '父分类1',
-    children: [
-      { name: '子分类A', type: 'A' },
-      { name: '子分类B', type: 'B' },
-    ],
-  },
-  {
-    name: '父分类2',
-    children: [{ name: '子分类C', type: 'C' }],
-  },
-];
-
-export default function CustomPage() {
+// 🔹 内部 Client 子组件，安全使用 useSearchParams
+function PageContent() {
   const searchParams = useSearchParams();
-  const parent = searchParams.get('parent') || '';
-  const child = searchParams.get('child') || '';
-
-  const [videos, setVideos] = useState<VideoItem[]>([]);
-
-  useEffect(() => {
-    if (parent && child) {
-      fetch(`/api/custom-videos?parent=${encodeURIComponent(parent)}&child=${encodeURIComponent(child)}`)
-        .then(res => res.json())
-        .then(data => setVideos(data.videos || []));
-    }
-  }, [parent, child]);
-
-  const activePath = `/custom?parent=${parent}&child=${child}`;
+  const category = searchParams.get("category") || "";
+  const subcategory = searchParams.get("subcategory") || "";
 
   return (
-    <PageLayout activePath={activePath}>
-      <div className="flex">
-        <Sidebar config={CUSTOM_CONFIG} activeParent={parent} activeChild={child} />
-        <main className="flex-1 p-4 md:ml-64">
-          <h1 className="text-xl font-bold mb-4">{child ? `分类: ${child}` : '请选择分类'}</h1>
-          {parent && child ? (
-            videos.length > 0 ? (
-              <ul className="space-y-2">
-                {videos.map(v => (
-                  <li key={v.id}>
-                    <a href={v.url} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
-                      {v.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <div>暂无视频</div>
-            )
-          ) : (
-            <div>请选择左侧分类</div>
-          )}
-        </main>
+    <PageLayout sidebar={<Sidebar />}>
+      <div className="p-4">
+        <h1 className="text-xl font-bold">Custom Videos</h1>
+        <p>当前分类: {category || "全部"}</p>
+        <p>子分类: {subcategory || "全部"}</p>
       </div>
     </PageLayout>
+  );
+}
+
+// 🔹 外层用 Suspense 包裹，避免 Vercel 构建报错
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
   );
 }
