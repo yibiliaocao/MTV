@@ -16,7 +16,7 @@
       "name": "如意资源"
     },
     "bfzy": {
-      "api": "https://bfzyapi.com/api.php/provide/vod",
+      "api": "https://bfzy.com/api.php/provide/vod",
       "name": "暴风资源"
     },
     "tyyszy": {
@@ -87,29 +87,76 @@
     },
     "91md": {
       "api": "https://91md.me/api.php/provide/vod",
-      "name": "91MD资源"
+      "name": "91MD资源"",
+      "detail": "https://91md.me"
     }
   },
   "custom_category": [
-    {"name":"91MD-麻豆视频","type":"movie","query":"麻豆视频"},
-    {"name":"91MD-91制片厂","type":"movie","query":"91制片厂"},
-    {"name":"91MD-天美传媒","type":"movie","query":"天美传媒"},
-    {"name":"91MD-蜜桃传媒","type":"movie","query":"蜜桃传媒"},
-    {"name":"91MD-皇家华人","type":"movie","query":"皇家华人"},
-    {"name":"91MD-星空传媒","type":"movie","query":"星空传媒"},
-    {"name":"91MD-精东影业","type":"movie","query":"精东影业"},
-    {"name":"91MD-乐播传媒","type":"movie","query":"乐播传媒"},
-    {"name":"91MD-成人头条","type":"movie","query":"成人头条"},
-    {"name":"91MD-乌鸦传媒","type":"movie","query":"乌鸦传媒"},
-    {"name":"91MD-兔子先生","type":"movie","query":"兔子先生"},
-    {"name":"91MD-杏吧原创","type":"movie","query":"杏吧原创"},
-    {"name":"91MD-玩偶姐姐","type":"movie","query":"玩偶姐姐"},
-    {"name":"91MD-mini传媒","type":"movie","query":"mini传媒"},
-    {"name":"91MD-大象传媒","type":"movie","query":"大象传媒"},
-    {"name":"91MD-开心鬼传媒","type":"movie","query":"开心鬼传媒"},
-    {"name":"91MD-PsychoPorn","type":"movie","query":"PsychoPorn"},
-    {"name":"91MD-糖心Vlog","type":"movie","query":"糖心Vlog"},
-    {"name":"91MD-萝莉社","type":"movie","query":"萝莉社"},
-    {"name":"91MD-性视界","type":"movie","query":"性视界"}
+    {
+      "name": "皮友福利",
+      "type": "parent",
+      "children": [
+        {
+          "name": "麻豆视频",
+          "type": "movie",
+          "site": "91md",
+          "query": "麻豆视频"
+        },
+        {
+          "name": "91制片厂",
+          "type": "movie",
+          "site": "91md",
+          "query": "91制片厂"
+        },
+        {
+          "name": "天美传媒",
+          "type": "movie",
+          "site": "91md",
+          "query": "天美传媒"
+        },
+        {
+          "name": "蜜桃传媒",
+          "type": "movie",
+          "site": "91md",
+          "query": "蜜桃传媒"
+        },
+        {
+          "name": "皇家华人",
+          "type": "movie",
+          "site": "91md",
+          "query": "皇家华人"
+        },
+        {
+          "name": "星空传媒",
+          "type": "movie",
+          "site": "91md",
+          "query": "星空传媒"
+        },
+        {
+          "name": "精东影业",
+          "type": "movie",
+          "site": "91md",
+          "query": "精东影业"
+        },
+        {
+          "name": "乐播传媒",
+          "type": "movie",
+          "site": "91md",
+          "query": "乐播传媒"
+        },
+        {
+          "name": "成人头条",
+          "type": "movie",
+          "site": "91md",
+          "query": "成人头条"
+        },
+        {
+          "name": "开心鬼传媒",
+          "type": "movie",
+          "site": "91md",
+          "query": "开心鬼传媒"
+        }
+      ]
+    }
   ]
 }
