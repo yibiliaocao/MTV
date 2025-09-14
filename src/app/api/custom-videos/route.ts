@@ -1,35 +1,28 @@
 import { NextResponse } from 'next/server';
 
-interface CustomParent {
-  name: string;
-  children: { name: string; type: string; query: string }[];
+interface Video {
+  id: string;
+  title: string;
+  thumb: string;
+  link: string;
 }
 
-export const runtime = 'edge';
+// 模拟资源站数据
+const MOCK_DATA: Record<string, Video[]> = {
+  动作: [
+    { id: '1', title: '动作片A', thumb: '/thumb1.jpg', link: '/video/1' },
+    { id: '2', title: '动作片B', thumb: '/thumb2.jpg', link: '/video/2' },
+  ],
+  喜剧: [
+    { id: '3', title: '喜剧片A', thumb: '/thumb3.jpg', link: '/video/3' },
+    { id: '4', title: '喜剧片B', thumb: '/thumb4.jpg', link: '/video/4' },
+  ],
+};
 
-const RUNTIME_CONFIG: { CUSTOM_PARENT_CATEGORY?: CustomParent[] } = (globalThis as any).RUNTIME_CONFIG ?? {};
-
-export async function GET(req: Request) {
-  const url = new URL(req.url);
-  const parentName = url.searchParams.get('parent');
-  if (!parentName) return NextResponse.json({ videos: [] });
-
-  const parent = RUNTIME_CONFIG.CUSTOM_PARENT_CATEGORY?.find(p => p.name === parentName);
-  if (!parent) return NextResponse.json({ videos: [] });
-
-  const videos: any[] = [];
-
-  for (const child of parent.children) {
-    try {
-      // 假设子分类的 query 可以直接用于资源站 API
-      const apiUrl = `https://example.com/api?type=${child.type}&query=${encodeURIComponent(child.query)}`;
-      const res = await fetch(apiUrl);
-      const data = await res.json();
-      if (Array.isArray(data.videos)) videos.push(...data.videos);
-    } catch (err) {
-      console.error(err);
-    }
-  }
+export async function GET(request: Request) {
+  const url = new URL(request.url);
+  const parent = url.searchParams.get('parent') || '';
+  const videos = MOCK_DATA[parent] || [];
 
   return NextResponse.json({ videos });
 }
